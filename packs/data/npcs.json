@@ -1,0 +1,68 @@
+[
+  {
+    "name": "NPC Somebody Template",
+    "type": "npc",
+    "system": {
+      "identity": {
+        "cloneName": "",
+        "clearance": "R",
+        "sector": "",
+        "cloneNumber": 0,
+        "teamName": "",
+        "mbd": "",
+        "serviceGroup": ""
+      },
+      "resources": {
+        "moxie": { "value": 0, "max": 8 },
+        "xp": { "value": 0 },
+        "treasonStars": { "value": 0 }
+      },
+      "wounds": { "level": "fine" },
+      "npc": {
+        "quote": "",
+        "basics": {
+          "serviceGroup": "",
+          "secretSociety": "",
+          "mutantPower": ""
+        },
+        "looks": "",
+        "quirks": "",
+        "plans": "",
+        "gear": ""
+      }
+    }
+  },
+  {
+    "name": "NPC Nobody Template",
+    "type": "npc",
+    "system": {
+      "identity": {
+        "cloneName": "",
+        "clearance": "R",
+        "sector": "",
+        "cloneNumber": 0,
+        "teamName": "",
+        "mbd": "",
+        "serviceGroup": ""
+      },
+      "resources": {
+        "moxie": { "value": 0, "max": 8 },
+        "xp": { "value": 0 },
+        "treasonStars": { "value": 0 }
+      },
+      "wounds": { "level": "fine" },
+      "npc": {
+        "quote": "",
+        "basics": {
+          "serviceGroup": "",
+          "secretSociety": "",
+          "mutantPower": ""
+        },
+        "looks": "",
+        "quirks": "",
+        "plans": "",
+        "gear": ""
+      }
+    }
+  }
+]

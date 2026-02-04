@@ -1,0 +1,446 @@
+[
+  {
+    "name": "Double Armour",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Green",
+      "category": "armor",
+      "successEffect": "-2 successes from any attack roll using lasers lower than UV or physical attacks like bullets.",
+      "treasonEffect": "Protective but bulky; -1 NODE to all rolls while wearing it from now on.",
+      "notes": "Reflec + Kevlar combination."
+    }
+  },
+  {
+    "name": "Kevlar Armour",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Orange",
+      "category": "armor",
+      "successEffect": "-3 successes from all attack rolls using physical damage like knives or truncheons. Energy attacks like lasers are unaffected.",
+      "treasonEffect": "Too bad this did not cover the groin; take damage normally and hope to avoid a Maimed result.",
+      "notes": "Helmet, vest, arm and leg armour."
+    }
+  },
+  {
+    "name": "Reflec Armour",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Red-Violet",
+      "category": "armor",
+      "successEffect": "Remove one success from a laser attack of the same clearance or lower.",
+      "treasonEffect": "This should have been worn over the face. Take damage normally.",
+      "notes": "Shiny jumpsuits that block same-color lasers or lower."
+    }
+  },
+  {
+    "name": "Riot Shield",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Red",
+      "category": "armor",
+      "successEffect": "-1 success from an attack roll's result before determining damage.",
+      "treasonEffect": "The shield worked but broke.",
+      "notes": "Clear rectangular shield with a smiley face."
+    }
+  },
+  {
+    "name": "Total Safety Armour (The Safe)",
+    "type": "equipment",
+    "system": {
+      "level": 5,
+      "clearance": "Blue",
+      "category": "armor",
+      "successEffect": "Block all damage, even from lava, nukes, etc.",
+      "treasonEffect": "The Safe has fallen and anyone inside is stuck.",
+      "notes": "Coffin-shaped metal container. No mobility."
+    }
+  },
+  {
+    "name": "Data Bomb",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Green",
+      "category": "gear",
+      "successEffect": "All digitally stored data within 1 meter is permanently erased. Bots either go Frankenstein or power down.",
+      "treasonEffect": "Only the user's Coretech is affected; amnesia for the user.",
+      "notes": "Polymorphic worm device."
+    }
+  },
+  {
+    "name": "Actor's Friend",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Yellow",
+      "category": "gear",
+      "successEffect": "+1 success on the next applicable roll.",
+      "treasonEffect": "-2 NODE for the next applicable roll because no one looks like that normally.",
+      "notes": "Makeup, wigs, fake moustaches and teeth."
+    }
+  },
+  {
+    "name": "Light Emitter Disguise Kit",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "+1 Treason Star to anyone saying you are not a lamp.",
+      "treasonEffect": "Cannot act until something hits you because lamps don't move.",
+      "notes": "Lampshade hat and fake power cord."
+    }
+  },
+  {
+    "name": "Spybot",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "+1 success for spying on a scene.",
+      "treasonEffect": "Drone gets chewed on by a petbot and destroyed.",
+      "notes": "Four-rotor drone controlled by Coretech."
+    }
+  },
+  {
+    "name": "Torch",
+    "type": "equipment",
+    "system": {
+      "level": 0,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "You can see.",
+      "treasonEffect": "Torch goes out; -2 Moxie (-3 if in total darkness).",
+      "notes": "Standard flashlight."
+    }
+  },
+  {
+    "name": "Sense Multiplier",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Yellow",
+      "category": "gear",
+      "successEffect": "+2 successes for using any of the five senses to gather intel.",
+      "treasonEffect": "Overstimulation; -2 Moxie.",
+      "notes": "Triples sensory range and sensitivity."
+    }
+  },
+  {
+    "name": "Ankle Monitor",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "Know the exact location of the monitor.",
+      "treasonEffect": "User fails to unlock; target escapes.",
+      "notes": "Can only be put on or removed by higher clearance."
+    }
+  },
+  {
+    "name": "Elevator Safety Foam",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Infrared",
+      "category": "gear",
+      "successEffect": "Remove all but one wound from a drop or fall.",
+      "treasonEffect": "Foam gets in lungs; user dies.",
+      "notes": "Foam fills an elevator-sized area."
+    }
+  },
+  {
+    "name": "Medkit",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "Heal 1 wound, +1 additional wound per success above the DIFF.",
+      "treasonEffect": "Increase the wound by one step (Injured to Maimed).",
+      "notes": "Simple first aid supplies."
+    }
+  },
+  {
+    "name": "Repkit",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "+2 successes to repair a bot or mechanical device.",
+      "treasonEffect": "Repaired device is permanently broken; +1 Treason Star.",
+      "notes": "Simple tools and spare parts."
+    }
+  },
+  {
+    "name": "Hyperspray",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Yellow",
+      "category": "gear",
+      "successEffect": "Target enjoys whatever drug was in the spray.",
+      "treasonEffect": "User sprayed their own eyes.",
+      "notes": "Single-use prescription drug spray."
+    }
+  },
+  {
+    "name": "Pedestrian Cruise Control",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "Force the wearer to walk a route for five minutes at a time.",
+      "treasonEffect": "Wearer walks into a wall for a Hurt; user gets +1 Treason Star.",
+      "notes": "Leg braces controlled by owner's Coretech."
+    }
+  },
+  {
+    "name": "Gelgernine (Happy Pills)",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "+2 Moxie and reduce all current flags by one step.",
+      "treasonEffect": "User cannot complain about anything.",
+      "notes": "Happiness in a little blue pill."
+    }
+  },
+  {
+    "name": "Focusol",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "+1 success to all Brains rolls.",
+      "treasonEffect": "-2 NODE to all Chutzpah rolls.",
+      "notes": "Laser-like focus."
+    }
+  },
+  {
+    "name": "Traitor Leash",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "-2 NODE for trying to escape or go where the user does not want.",
+      "treasonEffect": "Accidentally free the target and get +2 Treason Stars.",
+      "notes": "Metal collar with elastic leash."
+    }
+  },
+  {
+    "name": "Zip Ties",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "-4 NODE for all rolls using hands or movement until removed.",
+      "treasonEffect": "Dropped the tie while putting it on; traitor gets one free attack.",
+      "notes": "Plastic cords for tying hands or feet."
+    }
+  },
+  {
+    "name": "Oxyfenerin",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Orange",
+      "category": "gear",
+      "successEffect": "No NODE penalties due to wounds.",
+      "treasonEffect": "-3 NODE for anything involving touch (not triggers).",
+      "notes": "Painkiller."
+    }
+  },
+  {
+    "name": "Flashbang Grenade",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Red",
+      "category": "weapon",
+      "successEffect": "All in the room are blind and deaf for three rounds.",
+      "treasonEffect": "Grenade bounces back; only the user is blind and deaf for three rounds.",
+      "notes": "Disorientation grenade."
+    }
+  },
+  {
+    "name": "Thymoblandin",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Red",
+      "category": "gear",
+      "successEffect": "+1 success for rolls about staying calm; Moxie loss reduced by one.",
+      "treasonEffect": "Took thymoglandin instead; -3 NODE to avoid fighting when stressed.",
+      "notes": "Calming pill with cross imprint."
+    }
+  },
+  {
+    "name": "Frag Grenade",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Orange",
+      "category": "weapon",
+      "successEffect": "Any wound level is doubled.",
+      "treasonEffect": "Threw the pin and tossed the grenade where the GM says.",
+      "notes": "Anti-personnel grenade."
+    }
+  },
+  {
+    "name": "Thymoglandin",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Blue",
+      "category": "gear",
+      "successEffect": "+1 success to all Violence rolls.",
+      "treasonEffect": "Took thymoblandin instead; -3 NODE to attack anyone or defend.",
+      "notes": "Fight ferociously."
+    }
+  },
+  {
+    "name": "Cone Rifle (Big Blue)",
+    "type": "equipment",
+    "system": {
+      "level": 4,
+      "clearance": "Blue",
+      "category": "weapon",
+      "successEffect": "Hurts from this weapon become Maimed and all other wounds become Dead.",
+      "treasonEffect": "Missed target and hit something important; -100 XP Points and gain a C-of-I flag.",
+      "notes": "Unguided shoulder-fired RPG launcher."
+    }
+  },
+  {
+    "name": "Gauss Rifle",
+    "type": "equipment",
+    "system": {
+      "level": 3,
+      "clearance": "Blue",
+      "category": "weapon",
+      "successEffect": "Bot stunned for 1d6 rounds; people are tickled.",
+      "treasonEffect": "Ungrounded wire shocks for an Injured wound and the user drops it.",
+      "notes": "Long rifle shooting electricity."
+    }
+  },
+  {
+    "name": "Knife",
+    "type": "equipment",
+    "system": {
+      "level": 0,
+      "clearance": "Red",
+      "category": "weapon",
+      "successEffect": "Target is bleeding and gains one Hurt each round until treated.",
+      "treasonEffect": "Forgot which end was sharp; same bleeding effect on the user.",
+      "notes": "Sharp and shiny."
+    }
+  },
+  {
+    "name": "Laser Pistol",
+    "type": "equipment",
+    "system": {
+      "level": 0,
+      "clearance": "Red-Violet",
+      "category": "weapon",
+      "successEffect": "",
+      "treasonEffect": "Battery ran out; find a charging station or battery fast.",
+      "notes": "Standard issue in Red through Violet."
+    }
+  },
+  {
+    "name": "Laser Rifle",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Orange-Violet",
+      "category": "weapon",
+      "successEffect": "Any Hurt wound caused by this is an Injured wound instead.",
+      "treasonEffect": "Battery ran out and will not hold a charge anymore.",
+      "notes": "Longer, more accurate laser gun."
+    }
+  },
+  {
+    "name": "Neurowhip",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Green",
+      "category": "weapon",
+      "successEffect": "-2 Moxie and cannot act next round.",
+      "treasonEffect": "Hit something important or valuable instead of the target.",
+      "notes": "Triggers every pain receptor."
+    }
+  },
+  {
+    "name": "Plasma Generator",
+    "type": "equipment",
+    "system": {
+      "level": 5,
+      "clearance": "Violet",
+      "category": "weapon",
+      "successEffect": "Vaporize the target and anything behind it.",
+      "treasonEffect": "Looked into the nozzle; the user's head goes missing along with the area behind it.",
+      "notes": "Superheated plasma blast."
+    }
+  },
+  {
+    "name": "Skinnerstick (The Teacher)",
+    "type": "equipment",
+    "system": {
+      "level": 1,
+      "clearance": "Orange",
+      "category": "weapon",
+      "successEffect": "No wounds; -1 Moxie per wound that would have been applied normally.",
+      "treasonEffect": "Hit self by accident for -2 Moxie.",
+      "notes": "Glorified cattle prod."
+    }
+  },
+  {
+    "name": "Sleep Grenade",
+    "type": "equipment",
+    "system": {
+      "level": 2,
+      "clearance": "Orange",
+      "category": "weapon",
+      "successEffect": "Targets within range fall asleep for 1 minute per success.",
+      "treasonEffect": "Looks like a frag grenade; did you need them alive?",
+      "notes": "Sleep gas grenade."
+    }
+  },
+  {
+    "name": "Tacnuke Grenade",
+    "type": "equipment",
+    "system": {
+      "level": 18,
+      "clearance": "Violet",
+      "category": "weapon",
+      "successEffect": "You are dead. Lots of people are dead too.",
+      "treasonEffect": "You are still dead. They are still dead too.",
+      "notes": "Tactical nuclear weapon."
+    }
+  },
+  {
+    "name": "Truncheon",
+    "type": "equipment",
+    "system": {
+      "level": 0,
+      "clearance": "Infrared",
+      "category": "weapon",
+      "successEffect": "Break a target's bone, turning Injured into Maimed (Hurt stays Hurt).",
+      "treasonEffect": "Sweaty hands; truncheon goes flying across the room.",
+      "notes": "IntSec baton or similar."
+    }
+  }
+]

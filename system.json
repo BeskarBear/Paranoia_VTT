@@ -9,7 +9,8 @@
   },
   "authors": [
     {
-      "name": "beskarbear"
+      "name": "beskarbear",
+      "discord": "beskarbear"
     }
   ],
   "esmodules": ["module/paranoia.mjs"],
@@ -21,14 +22,15 @@
       "path": "lang/en.json"
     }
   ],
-  "primaryTokenAttribute": null,
+  "primaryTokenAttribute": "resources.moxie",
   "secondaryTokenAttribute": null,
   "grid": {
     "distance": 5,
     "units": "ft"
   },
-  "socket": false,
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "socket": true,
+  "url": "https://github.com/beskarbear/paranoia-vtt",
+  "bugs": "https://github.com/beskarbear/paranoia-vtt/issues",
+  "manifest": "https://github.com/beskarbear/paranoia-vtt/releases/latest/download/system.json",
+  "download": "https://github.com/beskarbear/paranoia-vtt/releases/latest/download/paranoia-vtt.zip"
 }

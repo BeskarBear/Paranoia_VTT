@@ -1,207 +1,572 @@
+/**
+ * Paranoia VTT System Stylesheet
+ * Uses CSS custom properties for easy theming and consistency.
+ */
+
+/* ============================================================================
+   CSS Custom Properties (Variables)
+   ============================================================================ */
+
+:root {
+  /* Primary Colors */
+  --paranoia-primary: #e95f5f;
+  --paranoia-primary-hover: #d64545;
+  --paranoia-success: #2d6a4f;
+  --paranoia-success-light: #1f7a3e;
+  --paranoia-failure: #b42d2d;
+  --paranoia-warning: #cc7a00;
+
+  /* Background Colors */
+  --paranoia-bg-light: #f9f7f1;
+  --paranoia-bg-lighter: #f1f4f5;
+  --paranoia-bg-warm: #fdf7e3;
+  --paranoia-bg-warm-border: #d6caa1;
+  --paranoia-bg-white: #ffffff;
+
+  /* Text Colors */
+  --paranoia-text: #1b1b1b;
+  --paranoia-text-muted: #5f6b6d;
+  --paranoia-text-warm: #5c4b1a;
+
+  /* Border Colors */
+  --paranoia-border: #dcdcdc;
+  --paranoia-border-light: #e8e8e8;
+
+  /* Clearance Colors */
+  --paranoia-infrared: #1a1a1a;
+  --paranoia-red: #cc0000;
+  --paranoia-orange: #ff6600;
+  --paranoia-yellow: #ffcc00;
+  --paranoia-green: #00cc00;
+  --paranoia-blue: #0066cc;
+  --paranoia-indigo: #4b0082;
+  --paranoia-violet: #8b00ff;
+  --paranoia-ultraviolet: #ffffff;
+
+  /* Computer Die */
+  --paranoia-computer-die: #ffdf99;
+  --paranoia-die-bg: #f0f0f0;
+
+  /* Spacing */
+  --paranoia-spacing-xs: 4px;
+  --paranoia-spacing-sm: 6px;
+  --paranoia-spacing-md: 10px;
+  --paranoia-spacing-lg: 12px;
+  --paranoia-spacing-xl: 16px;
+
+  /* Border Radius */
+  --paranoia-radius-sm: 4px;
+  --paranoia-radius: 6px;
+  --paranoia-radius-md: 8px;
+  --paranoia-radius-lg: 10px;
+
+  /* Typography */
+  --paranoia-font-family: "Trebuchet MS", "Verdana", sans-serif;
+  --paranoia-font-size-sm: 0.75rem;
+  --paranoia-font-size-base: 0.85rem;
+  --paranoia-font-size-lg: 1rem;
+  --paranoia-font-size-xl: 1.6rem;
+
+  /* Transitions */
+  --paranoia-transition: 0.15s ease-in-out;
+}
+
+/* ============================================================================
+   Base Sheet Styles
+   ============================================================================ */
+
 .paranoia-vtt .paranoia-sheet {
-  font-family: "Trebuchet MS", "Verdana", sans-serif;
-  color: #1b1b1b;
-  background: linear-gradient(140deg, #f9f7f1 0%, #f1f4f5 100%);
-  padding: 12px;
+  font-family: var(--paranoia-font-family);
+  color: var(--paranoia-text);
+  background: linear-gradient(140deg, var(--paranoia-bg-light) 0%, var(--paranoia-bg-lighter) 100%);
+  padding: var(--paranoia-spacing-lg);
   height: 100%;
   overflow: hidden;
 }
 
+/* ============================================================================
+   Sheet Header
+   ============================================================================ */
+
 .paranoia-vtt .sheet-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: var(--paranoia-spacing-xl);
+  margin-bottom: var(--paranoia-spacing-lg);
 }
 
 .paranoia-vtt .sheet-header .actor-name {
-  font-size: 1.6rem;
+  font-size: var(--paranoia-font-size-xl);
   font-weight: 700;
-  padding: 6px 8px;
+  padding: var(--paranoia-spacing-sm) var(--paranoia-spacing-md);
+  border: 1px solid var(--paranoia-border);
+  border-radius: var(--paranoia-radius);
 }
 
 .paranoia-vtt .identity-grid {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 6px 10px;
+  gap: var(--paranoia-spacing-sm) var(--paranoia-spacing-md);
   align-items: center;
-  margin-top: 8px;
+  margin-top: var(--paranoia-spacing-md);
 }
 
 .paranoia-vtt .header-right {
   display: grid;
-  gap: 10px;
+  gap: var(--paranoia-spacing-md);
   align-content: start;
 }
 
+/* ============================================================================
+   Resource Blocks
+   ============================================================================ */
+
 .paranoia-vtt .resource-block {
-  background: #fdf7e3;
-  border: 1px solid #d6caa1;
-  border-radius: 8px;
-  padding: 8px;
+  background: var(--paranoia-bg-warm);
+  border: 1px solid var(--paranoia-bg-warm-border);
+  border-radius: var(--paranoia-radius-md);
+  padding: var(--paranoia-spacing-md);
 }
 
 .paranoia-vtt .resource-block label {
   display: block;
   font-weight: 600;
-  margin-bottom: 4px;
+  margin-bottom: var(--paranoia-spacing-xs);
+}
+
+.paranoia-vtt .resource-block input {
+  width: 60px;
 }
 
 .paranoia-vtt .resource-note {
-  font-size: 0.8rem;
-  color: #5c4b1a;
-  margin-top: 4px;
+  font-size: var(--paranoia-font-size-sm) + 0.05rem;
+  color: var(--paranoia-text-warm);
+  margin-top: var(--paranoia-spacing-xs);
 }
 
+/* ============================================================================
+   Buttons
+   ============================================================================ */
+
 .paranoia-vtt .roll-custom {
-  background: #e95f5f;
-  color: #fff;
+  background: var(--paranoia-primary);
+  color: var(--paranoia-bg-white);
   border: none;
-  padding: 8px 10px;
+  padding: var(--paranoia-spacing-md);
   font-weight: 700;
-  border-radius: 6px;
+  border-radius: var(--paranoia-radius);
   cursor: pointer;
+  transition: background var(--paranoia-transition);
 }
+
+.paranoia-vtt .roll-custom:hover {
+  background: var(--paranoia-primary-hover);
+}
+
+.paranoia-vtt .skill-row button {
+  background: var(--paranoia-success);
+  color: var(--paranoia-bg-white);
+  border: none;
+  padding: 2px var(--paranoia-spacing-sm);
+  border-radius: var(--paranoia-radius-sm);
+  font-size: var(--paranoia-font-size-sm);
+  cursor: pointer;
+  transition: background var(--paranoia-transition);
+}
+
+.paranoia-vtt .skill-row button:hover {
+  background: var(--paranoia-success-light);
+}
+
+/* ============================================================================
+   Stats & Skills
+   ============================================================================ */
 
 .paranoia-vtt .stats-skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 12px;
+  gap: var(--paranoia-spacing-lg);
 }
 
 .paranoia-vtt .stat-block {
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #dcdcdc;
-  padding: 10px;
+  background: var(--paranoia-bg-white);
+  border-radius: var(--paranoia-radius-lg);
+  border: 1px solid var(--paranoia-border);
+  padding: var(--paranoia-spacing-md);
 }
 
 .paranoia-vtt .stat-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: var(--paranoia-spacing-sm);
 }
 
 .paranoia-vtt .stat-header label {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: var(--paranoia-font-size-base);
   letter-spacing: 0.05em;
+}
+
+.paranoia-vtt .stat-header input {
+  width: 40px;
+  text-align: center;
 }
 
 .paranoia-vtt .skill-list {
   display: grid;
-  gap: 6px;
+  gap: var(--paranoia-spacing-sm);
 }
 
 .paranoia-vtt .skill-row {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
-  gap: 6px;
+  gap: var(--paranoia-spacing-sm);
   align-items: center;
 }
 
-.paranoia-vtt .skill-row button {
-  background: #2d6a4f;
-  color: #fff;
-  border: none;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 0.75rem;
+.paranoia-vtt .skill-row input {
+  width: 40px;
+  text-align: center;
 }
 
 .paranoia-vtt .skill-node {
-  font-size: 0.8rem;
-  color: #5f6b6d;
+  font-size: var(--paranoia-font-size-sm) + 0.05rem;
+  color: var(--paranoia-text-muted);
   text-align: right;
+  min-width: 50px;
 }
+
+/* ============================================================================
+   Panels & Notes
+   ============================================================================ */
 
 .paranoia-vtt .roleplay-grid,
 .paranoia-vtt .notes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 12px;
-  margin-top: 12px;
+  gap: var(--paranoia-spacing-lg);
+  margin-top: var(--paranoia-spacing-lg);
 }
 
 .paranoia-vtt .panel {
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #dcdcdc;
-  padding: 10px;
+  background: var(--paranoia-bg-white);
+  border-radius: var(--paranoia-radius-lg);
+  border: 1px solid var(--paranoia-border);
+  padding: var(--paranoia-spacing-md);
 }
 
 .paranoia-vtt .panel h3 {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
+  margin: 0 0 var(--paranoia-spacing-sm) 0;
+  font-size: var(--paranoia-font-size-lg);
 }
 
 .paranoia-vtt textarea {
   width: 100%;
   min-height: 80px;
   resize: vertical;
+  border: 1px solid var(--paranoia-border);
+  border-radius: var(--paranoia-radius-sm);
+  padding: var(--paranoia-spacing-sm);
 }
 
+/* ============================================================================
+   Items Section
+   ============================================================================ */
+
 .paranoia-vtt .items-section {
-  background: #ffffff;
-  border-radius: 10px;
-  border: 1px solid #dcdcdc;
-  padding: 10px;
-  margin-bottom: 12px;
+  background: var(--paranoia-bg-white);
+  border-radius: var(--paranoia-radius-lg);
+  border: 1px solid var(--paranoia-border);
+  padding: var(--paranoia-spacing-md);
+  margin-bottom: var(--paranoia-spacing-lg);
 }
 
 .paranoia-vtt .items-section header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: var(--paranoia-spacing-md);
+}
+
+.paranoia-vtt .items-section header h3 {
+  margin: 0;
 }
 
 .paranoia-vtt .items-list {
   display: grid;
-  gap: 6px;
+  gap: var(--paranoia-spacing-sm);
 }
 
 .paranoia-vtt .item-row {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: 6px;
+  gap: var(--paranoia-spacing-sm);
   align-items: center;
+  padding: var(--paranoia-spacing-xs) 0;
+  border-bottom: 1px solid var(--paranoia-border-light);
+}
+
+.paranoia-vtt .item-row:last-child {
+  border-bottom: none;
 }
 
 .paranoia-vtt .item-controls button {
-  margin-left: 4px;
+  margin-left: var(--paranoia-spacing-xs);
+  padding: 2px var(--paranoia-spacing-sm);
+  font-size: var(--paranoia-font-size-sm);
 }
 
-.paranoia-vtt .paranoia-roll {
-  font-family: "Trebuchet MS", "Verdana", sans-serif;
+/* ============================================================================
+   Chat Roll Cards
+   ============================================================================ */
+
+.paranoia-roll {
+  font-family: var(--paranoia-font-family);
+  padding: var(--paranoia-spacing-md);
 }
 
-.paranoia-vtt .paranoia-roll .die {
+.paranoia-roll h2 {
+  margin: 0 0 var(--paranoia-spacing-md) 0;
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--paranoia-primary);
+  padding-bottom: var(--paranoia-spacing-xs);
+}
+
+.paranoia-roll .roll-meta {
+  font-size: var(--paranoia-font-size-base);
+  margin-bottom: var(--paranoia-spacing-md);
+}
+
+.paranoia-roll .roll-meta div {
+  margin-bottom: var(--paranoia-spacing-xs);
+}
+
+.paranoia-roll .roll-results {
+  background: var(--paranoia-bg-light);
+  padding: var(--paranoia-spacing-md);
+  border-radius: var(--paranoia-radius);
+}
+
+.paranoia-roll .die {
   display: inline-block;
-  background: #f0f0f0;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-right: 4px;
+  background: var(--paranoia-die-bg);
+  padding: 2px var(--paranoia-spacing-sm);
+  border-radius: var(--paranoia-radius-sm);
+  margin-right: var(--paranoia-spacing-xs);
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
 }
 
-.paranoia-vtt .paranoia-roll .die.computer {
-  background: #ffdf99;
+.paranoia-roll .die.computer {
+  background: var(--paranoia-computer-die);
 }
 
-.paranoia-vtt .roll-outcome.success {
-  color: #1f7a3e;
+.paranoia-roll .roll-outcome {
+  margin-top: var(--paranoia-spacing-md);
+  font-size: 1.1rem;
+}
+
+.paranoia-roll .roll-outcome.success {
+  color: var(--paranoia-success-light);
   font-weight: 700;
 }
 
-.paranoia-vtt .roll-outcome.failure {
-  color: #b42d2d;
+.paranoia-roll .roll-outcome.failure {
+  color: var(--paranoia-failure);
   font-weight: 700;
 }
+
+.paranoia-roll .computer-attention {
+  margin-top: var(--paranoia-spacing-sm);
+  font-size: var(--paranoia-font-size-base);
+  color: var(--paranoia-text-muted);
+}
+
+/* ============================================================================
+   Item Chat Cards
+   ============================================================================ */
+
+.paranoia-item-card {
+  font-family: var(--paranoia-font-family);
+  padding: var(--paranoia-spacing-md);
+}
+
+.paranoia-item-card .item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--paranoia-spacing-md);
+  margin-bottom: var(--paranoia-spacing-md);
+  border-bottom: 2px solid var(--paranoia-primary);
+  padding-bottom: var(--paranoia-spacing-sm);
+}
+
+.paranoia-item-card .item-image {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--paranoia-radius-sm);
+}
+
+.paranoia-item-card .item-name {
+  margin: 0;
+  flex: 1;
+}
+
+.paranoia-item-card .item-type {
+  font-size: var(--paranoia-font-size-sm);
+  color: var(--paranoia-text-muted);
+  text-transform: uppercase;
+}
+
+.paranoia-item-card .item-content {
+  font-size: var(--paranoia-font-size-base);
+}
+
+.paranoia-item-card .item-details {
+  background: var(--paranoia-bg-light);
+  padding: var(--paranoia-spacing-sm);
+  border-radius: var(--paranoia-radius-sm);
+  margin-bottom: var(--paranoia-spacing-sm);
+}
+
+.paranoia-item-card .detail-row {
+  margin-bottom: var(--paranoia-spacing-xs);
+}
+
+.paranoia-item-card .item-effect {
+  margin-bottom: var(--paranoia-spacing-sm);
+  padding: var(--paranoia-spacing-sm);
+  border-radius: var(--paranoia-radius-sm);
+}
+
+.paranoia-item-card .success-effect {
+  background: rgba(45, 106, 79, 0.1);
+  border-left: 3px solid var(--paranoia-success);
+}
+
+.paranoia-item-card .treason-effect {
+  background: rgba(180, 45, 45, 0.1);
+  border-left: 3px solid var(--paranoia-failure);
+}
+
+.paranoia-item-card .item-purpose,
+.paranoia-item-card .item-warning,
+.paranoia-item-card .item-app {
+  margin-bottom: var(--paranoia-spacing-sm);
+}
+
+.paranoia-item-card .item-warning {
+  color: var(--paranoia-warning);
+}
+
+.paranoia-item-card .item-modifiers {
+  margin-bottom: var(--paranoia-spacing-sm);
+}
+
+.paranoia-item-card .modifier {
+  display: inline-block;
+  padding: 2px var(--paranoia-spacing-sm);
+  border-radius: var(--paranoia-radius-sm);
+  margin-right: var(--paranoia-spacing-xs);
+  font-weight: 600;
+}
+
+.paranoia-item-card .modifier.plus {
+  background: rgba(45, 106, 79, 0.2);
+  color: var(--paranoia-success);
+}
+
+.paranoia-item-card .modifier.minus {
+  background: rgba(180, 45, 45, 0.2);
+  color: var(--paranoia-failure);
+}
+
+.paranoia-item-card .item-notes {
+  color: var(--paranoia-text-muted);
+  font-style: italic;
+}
+
+/* ============================================================================
+   Item Sheets
+   ============================================================================ */
+
+.paranoia-vtt.sheet.item .window-content {
+  padding: var(--paranoia-spacing-lg);
+  background: var(--paranoia-bg-light);
+}
+
+.paranoia-vtt.sheet.item .form-group {
+  margin-bottom: var(--paranoia-spacing-md);
+}
+
+.paranoia-vtt.sheet.item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--paranoia-spacing-xs);
+}
+
+/* ============================================================================
+   Context Menu Styles
+   ============================================================================ */
+
+.paranoia-vtt .context-menu {
+  background: var(--paranoia-bg-white);
+  border: 1px solid var(--paranoia-border);
+  border-radius: var(--paranoia-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.paranoia-vtt .context-menu li {
+  padding: var(--paranoia-spacing-sm) var(--paranoia-spacing-md);
+  cursor: pointer;
+  transition: background var(--paranoia-transition);
+}
+
+.paranoia-vtt .context-menu li:hover {
+  background: var(--paranoia-bg-light);
+}
+
+/* ============================================================================
+   Responsive Design
+   ============================================================================ */
 
 @media (max-width: 800px) {
   .paranoia-vtt .sheet-header {
     grid-template-columns: 1fr;
   }
+
+  .paranoia-vtt .stats-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .paranoia-vtt .roleplay-grid,
+  .paranoia-vtt .notes-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* ============================================================================
+   Clearance Color Classes
+   ============================================================================ */
+
+.paranoia-clearance-ir { color: var(--paranoia-infrared); }
+.paranoia-clearance-r { color: var(--paranoia-red); }
+.paranoia-clearance-o { color: var(--paranoia-orange); }
+.paranoia-clearance-y { color: var(--paranoia-yellow); }
+.paranoia-clearance-g { color: var(--paranoia-green); }
+.paranoia-clearance-b { color: var(--paranoia-blue); }
+.paranoia-clearance-i { color: var(--paranoia-indigo); }
+.paranoia-clearance-v { color: var(--paranoia-violet); }
+.paranoia-clearance-u { color: var(--paranoia-ultraviolet); background: #333; }
+
+.paranoia-clearance-bg-ir { background-color: var(--paranoia-infrared); color: #fff; }
+.paranoia-clearance-bg-r { background-color: var(--paranoia-red); color: #fff; }
+.paranoia-clearance-bg-o { background-color: var(--paranoia-orange); color: #000; }
+.paranoia-clearance-bg-y { background-color: var(--paranoia-yellow); color: #000; }
+.paranoia-clearance-bg-g { background-color: var(--paranoia-green); color: #fff; }
+.paranoia-clearance-bg-b { background-color: var(--paranoia-blue); color: #fff; }
+.paranoia-clearance-bg-i { background-color: var(--paranoia-indigo); color: #fff; }
+.paranoia-clearance-bg-v { background-color: var(--paranoia-violet); color: #fff; }
+.paranoia-clearance-bg-u { background-color: var(--paranoia-ultraviolet); color: #000; border: 1px solid #333; }

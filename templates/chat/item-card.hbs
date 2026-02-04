@@ -1,0 +1,106 @@
+<div class="paranoia-item-card">
+  <header class="item-header">
+    {{#if img}}
+      <img src="{{img}}" alt="{{name}}" class="item-image" />
+    {{/if}}
+    <h3 class="item-name">{{name}}</h3>
+    <span class="item-type">{{capitalize type}}</span>
+  </header>
+
+  <div class="item-content">
+    {{#if isEquipment}}
+      <div class="item-details">
+        <div class="detail-row">
+          <strong>Level:</strong> {{system.level}}
+        </div>
+        <div class="detail-row">
+          <strong>Clearance:</strong> {{clearanceLabel}}
+        </div>
+        <div class="detail-row">
+          <strong>Category:</strong> {{categoryLabel}}
+        </div>
+      </div>
+
+      {{#if system.successEffect}}
+        <div class="item-effect success-effect">
+          <strong>Success:</strong> {{system.successEffect}}
+        </div>
+      {{/if}}
+
+      {{#if system.treasonEffect}}
+        <div class="item-effect treason-effect">
+          <strong>Treason:</strong> {{system.treasonEffect}}
+        </div>
+      {{/if}}
+
+      {{#if system.notes}}
+        <div class="item-notes">
+          <em>{{system.notes}}</em>
+        </div>
+      {{/if}}
+    {{/if}}
+
+    {{#if isMutantPower}}
+      {{#if system.purpose}}
+        <div class="item-purpose">
+          <strong>Purpose:</strong> {{system.purpose}}
+        </div>
+      {{/if}}
+
+      {{#if system.warning}}
+        <div class="item-warning">
+          <strong>Warning:</strong> {{system.warning}}
+        </div>
+      {{/if}}
+
+      {{#if system.notes}}
+        <div class="item-notes">
+          <em>{{system.notes}}</em>
+        </div>
+      {{/if}}
+    {{/if}}
+
+    {{#if isSecretSociety}}
+      {{#if system.purpose}}
+        <div class="item-purpose">
+          <strong>Purpose:</strong> {{system.purpose}}
+        </div>
+      {{/if}}
+
+      <div class="item-modifiers">
+        {{#if system.modifiers.plus}}
+          <span class="modifier plus">+{{system.modifiers.plus}}</span>
+        {{/if}}
+        {{#if system.modifiers.minus}}
+          <span class="modifier minus">-{{system.modifiers.minus}}</span>
+        {{/if}}
+      </div>
+
+      {{#if system.notes}}
+        <div class="item-notes">
+          <em>{{system.notes}}</em>
+        </div>
+      {{/if}}
+    {{/if}}
+
+    {{#if isCoretech}}
+      <div class="item-details">
+        <div class="detail-row">
+          <strong>Level:</strong> {{system.level}}
+        </div>
+      </div>
+
+      {{#if system.app}}
+        <div class="item-app">
+          <strong>App:</strong> {{system.app}}
+        </div>
+      {{/if}}
+
+      {{#if system.notes}}
+        <div class="item-notes">
+          <em>{{system.notes}}</em>
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

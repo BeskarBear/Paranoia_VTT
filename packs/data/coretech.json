@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Action Cache",
+    "type": "coretech",
+    "system": {
+      "level": 2,
+      "app": "Copy nerve signals used in your last action so it can be repeated even if incapacitated.",
+      "notes": "S: Redo the user's last action on the turn after their death; make a roll if necessary. T: The last action never stops happening until the corpse falls apart; next clone starts with -50 XP Points."
+    }
+  },
+  {
+    "name": "Happy Place",
+    "type": "coretech",
+    "system": {
+      "level": 1,
+      "app": "Fills the brain with sights, sounds and smells that reduce stress.",
+      "notes": "S: Cancel losing up to 3 Moxie from a stressful event. T: So happy that nothing aggressive can be done; will happily get beat up rather than fight."
+    }
+  },
+  {
+    "name": "Pak-N-Sniff",
+    "type": "coretech",
+    "system": {
+      "level": 2,
+      "app": "Intercept data packets from a target's Coretech signal before they act.",
+      "notes": "S: Pick a human character and go one clearance before them this round. T: Overwhelmed by packets; go dead last this round."
+    }
+  },
+  {
+    "name": "Vidiot Studio Pro",
+    "type": "coretech",
+    "system": {
+      "level": 2,
+      "app": "Idiot-proof video editing software for Coretech recordings.",
+      "notes": "S: +1 success when editing video evidence or using it to back accusations. T: Deleted the good parts; +1 Treason Star."
+    }
+  },
+  {
+    "name": "Sense Multiplier",
+    "type": "coretech",
+    "system": {
+      "level": 3,
+      "app": "Triples range and sensitivity of sensory signals to Coretechs.",
+      "notes": "S: +2 successes for using any of the five senses to gather intel. T: Overstimulation; -2 Moxie."
+    }
+  }
+]

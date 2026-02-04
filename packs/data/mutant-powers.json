@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Adrenalin Control",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Impressive bursts of strength and speed",
+      "warning": "Can lead to aggression and wounds",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Clone Empathy",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Win friends and influence people against their will",
+      "warning": "Can backfire and make people despise you",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Corrode",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Turn metal into a warm, ashy goo",
+      "warning": "Rarely affects your own hands, hardly ever",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Cryokinesis",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Create severe cold, even freeze things",
+      "warning": "Oww, brain freeze!",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Electroshock",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Shoot a bolt of electricity from your fingertips",
+      "warning": "Might short-out electric devices nearby",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Force Field",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Project a 1-metre circle of invisible protection",
+      "warning": "It can block air, so how long can you hold your breath?",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Hypersenses",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Turn the normal five senses up to 11",
+      "warning": "Overstimulation puts it mildly",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Invisibility",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Go invisible, including your clothes and gear",
+      "warning": "Ewww, only the skin went invisible",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Machine Empathy",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Bots and even The Computer can obey you",
+      "warning": "Can backfire and make bots and The Computer hate you",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Mental Blast",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Damage someone's brain from a distance",
+      "warning": "Can be reflected back at your own mind",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Pyrokinesis",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Create severe heat, even light things aflame",
+      "warning": "Oww, 2nd-degree burns!",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Telekinesis",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Move things with your mind",
+      "warning": "Move everything except the thing",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Telepathy",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Speak silently to others mind-to-mind",
+      "warning": "Did you just broadcast your own thoughts?",
+      "notes": ""
+    }
+  },
+  {
+    "name": "Teleport",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "Bamf yourself to a new location you can see",
+      "warning": "It is easy to forget to bring clothes and gear along for the ride",
+      "notes": ""
+    }
+  },
+  {
+    "name": "X-ray Vision",
+    "type": "mutantPower",
+    "system": {
+      "purpose": "See through metal, flesh and similar materials",
+      "warning": "Well hello, ocular melanoma!",
+      "notes": ""
+    }
+  }
+]
