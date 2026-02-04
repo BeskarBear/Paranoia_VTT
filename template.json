@@ -1,0 +1,160 @@
+{
+  "Actor": {
+    "types": ["troubleshooter", "npc"],
+    "troubleshooter": {
+      "stats": {
+        "brains": { "value": 0 },
+        "chutzpah": { "value": 0 },
+        "mechanics": { "value": 0 },
+        "violence": { "value": 0 }
+      },
+      "skills": {
+        "alphaComplex": { "value": 0 },
+        "bureaucracy": { "value": 0 },
+        "psychology": { "value": 0 },
+        "science": { "value": 0 },
+        "bluff": { "value": 0 },
+        "charm": { "value": 0 },
+        "intimidate": { "value": 0 },
+        "stealth": { "value": 0 },
+        "demolition": { "value": 0 },
+        "engineer": { "value": 0 },
+        "operate": { "value": 0 },
+        "program": { "value": 0 },
+        "athletics": { "value": 0 },
+        "guns": { "value": 2 },
+        "melee": { "value": 0 },
+        "throw": { "value": 0 }
+      },
+      "resources": {
+        "moxie": { "value": 8, "max": 8 },
+        "xp": { "value": 200 },
+        "treasonStars": { "value": 0 }
+      },
+      "wounds": {
+        "level": "fine"
+      },
+      "identity": {
+        "clearance": "R",
+        "cloneName": "",
+        "sector": "",
+        "cloneNumber": 1,
+        "teamName": "",
+        "mbd": "",
+        "serviceGroup": ""
+      },
+      "buttons": {
+        "violence": "",
+        "treason": ""
+      },
+      "mission": {
+        "objective": "",
+        "assignedGear": ""
+      },
+      "notes": {
+        "secretObjective": "",
+        "evidence": "",
+        "favours": "",
+        "other": ""
+      }
+    },
+    "npc": {
+      "stats": {
+        "brains": { "value": 0 },
+        "chutzpah": { "value": 0 },
+        "mechanics": { "value": 0 },
+        "violence": { "value": 0 }
+      },
+      "skills": {
+        "alphaComplex": { "value": 0 },
+        "bureaucracy": { "value": 0 },
+        "psychology": { "value": 0 },
+        "science": { "value": 0 },
+        "bluff": { "value": 0 },
+        "charm": { "value": 0 },
+        "intimidate": { "value": 0 },
+        "stealth": { "value": 0 },
+        "demolition": { "value": 0 },
+        "engineer": { "value": 0 },
+        "operate": { "value": 0 },
+        "program": { "value": 0 },
+        "athletics": { "value": 0 },
+        "guns": { "value": 0 },
+        "melee": { "value": 0 },
+        "throw": { "value": 0 }
+      },
+      "resources": {
+        "moxie": { "value": 0, "max": 8 },
+        "xp": { "value": 0 },
+        "treasonStars": { "value": 0 }
+      },
+      "wounds": {
+        "level": "fine"
+      },
+      "identity": {
+        "clearance": "R",
+        "cloneName": "",
+        "sector": "",
+        "cloneNumber": 0,
+        "teamName": "",
+        "mbd": "",
+        "serviceGroup": ""
+      },
+      "buttons": {
+        "violence": "",
+        "treason": ""
+      },
+      "mission": {
+        "objective": "",
+        "assignedGear": ""
+      },
+      "notes": {
+        "secretObjective": "",
+        "evidence": "",
+        "favours": "",
+        "other": ""
+      },
+      "npc": {
+        "quote": "",
+        "basics": {
+          "serviceGroup": "",
+          "secretSociety": "",
+          "mutantPower": ""
+        },
+        "looks": "",
+        "quirks": "",
+        "plans": "",
+        "gear": ""
+      }
+    }
+  },
+  "Item": {
+    "types": ["equipment", "mutantPower", "secretSociety", "coretech"],
+    "equipment": {
+      "level": 0,
+      "clearance": "R",
+      "category": "gear",
+      "successEffect": "",
+      "treasonEffect": "",
+      "notes": ""
+    },
+    "mutantPower": {
+      "purpose": "",
+      "warning": "",
+      "notes": ""
+    },
+    "secretSociety": {
+      "purpose": "",
+      "modifiers": {
+        "plus": "",
+        "minus": ""
+      },
+      "notes": ""
+    },
+    "coretech": {
+      "level": 0,
+      "app": "",
+      "notes": ""
+    }
+  }
+}

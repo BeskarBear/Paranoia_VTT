@@ -1,0 +1,243 @@
+<section class="paranoia-sheet">
+  <header class="sheet-header">
+    <div class="header-left">
+      <input class="actor-name" name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+      <div class="identity-grid">
+        <label>Clone Name</label>
+        <input name="system.identity.cloneName" type="text" value="{{system.identity.cloneName}}" />
+        <label>Clearance</label>
+        <select name="system.identity.clearance">
+          {{#each clearanceLevels}}
+            <option value="{{@key}}" {{#if (eq @key ../system.identity.clearance)}}selected{{/if}}>{{this}}</option>
+          {{/each}}
+        </select>
+        <label>Sector</label>
+        <input name="system.identity.sector" type="text" value="{{system.identity.sector}}" />
+        <label>Clone #</label>
+        <input name="system.identity.cloneNumber" type="number" value="{{system.identity.cloneNumber}}" />
+        <label>Team Name</label>
+        <input name="system.identity.teamName" type="text" value="{{system.identity.teamName}}" />
+        <label>MBD</label>
+        <input name="system.identity.mbd" type="text" value="{{system.identity.mbd}}" />
+        <label>Service Group</label>
+        <select name="system.identity.serviceGroup">
+          <option value=""></option>
+          {{#each serviceGroups}}
+            <option value="{{@key}}" {{#if (eq @key ../system.identity.serviceGroup)}}selected{{/if}}>{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="resource-block">
+        <label>Moxie</label>
+        <input name="system.resources.moxie.value" type="number" value="{{system.resources.moxie.value}}" />
+        <span class="resource-max">/ {{system.resources.moxie.max}}</span>
+      </div>
+      <div class="resource-block">
+        <label>XP Points</label>
+        <input name="system.resources.xp.value" type="number" value="{{system.resources.xp.value}}" />
+      </div>
+      <div class="resource-block">
+        <label>Treason Stars</label>
+        <input name="system.resources.treasonStars.value" type="number" min="0" max="4" value="{{system.resources.treasonStars.value}}" />
+        <div class="resource-note">Flag: {{system.derived.flagLabel}}</div>
+      </div>
+      <div class="resource-block">
+        <label>Wounds</label>
+        <select name="system.wounds.level">
+          {{#each woundLevels}}
+            <option value="{{@key}}" {{#if (eq @key ../system.wounds.level)}}selected{{/if}}>{{this.label}}</option>
+          {{/each}}
+        </select>
+        <div class="resource-note">Penalty: {{system.derived.woundPenalty}}</div>
+      </div>
+      <button class="roll-custom" type="button">Custom Roll</button>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs" data-group="primary">
+    <a class="item" data-tab="main">Main</a>
+    {{#if isNPC}}
+      <a class="item" data-tab="npc">NPC</a>
+    {{/if}}
+    <a class="item" data-tab="notes">Notes</a>
+    <a class="item" data-tab="items">Items</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab" data-group="primary" data-tab="main">
+      <div class="stats-skills">
+        {{#each stats}}
+          <div class="stat-block">
+            <div class="stat-header">
+              <label>{{label}}</label>
+              <input name="system.stats.{{key}}.value" type="number" value="{{value}}" />
+            </div>
+            <div class="skill-list">
+              {{#each (lookup ../skillsByStat key)}}
+                <div class="skill-row">
+                  <button class="roll-skill" type="button" data-stat="{{statKey}}" data-skill="{{key}}">Roll</button>
+                  <span class="skill-label">{{label}}</span>
+                  <input name="system.skills.{{key}}.value" type="number" value="{{value}}" />
+                  <span class="skill-node">NODE {{formatMod node}}</span>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="roleplay-grid">
+        <div class="panel">
+          <h3>Buttons</h3>
+          <label>Violence</label>
+          <input name="system.buttons.violence" type="text" value="{{system.buttons.violence}}" />
+          <label>Treason</label>
+          <input name="system.buttons.treason" type="text" value="{{system.buttons.treason}}" />
+        </div>
+        <div class="panel">
+          <h3>Mission</h3>
+          <label>Objective</label>
+          <input name="system.mission.objective" type="text" value="{{system.mission.objective}}" />
+          <label>Assigned Gear</label>
+          <input name="system.mission.assignedGear" type="text" value="{{system.mission.assignedGear}}" />
+        </div>
+      </div>
+    </div>
+
+    <div class="tab" data-group="primary" data-tab="notes">
+      <div class="notes-grid">
+        <div class="panel">
+          <h3>Secret Objective</h3>
+          <textarea name="system.notes.secretObjective">{{system.notes.secretObjective}}</textarea>
+        </div>
+        <div class="panel">
+          <h3>Evidence</h3>
+          <textarea name="system.notes.evidence">{{system.notes.evidence}}</textarea>
+        </div>
+        <div class="panel">
+          <h3>Favours</h3>
+          <textarea name="system.notes.favours">{{system.notes.favours}}</textarea>
+        </div>
+        <div class="panel">
+          <h3>Other</h3>
+          <textarea name="system.notes.other">{{system.notes.other}}</textarea>
+        </div>
+      </div>
+    </div>
+
+    {{#if isNPC}}
+      <div class="tab" data-group="primary" data-tab="npc">
+        <div class="notes-grid">
+          <div class="panel">
+            <h3>Quote</h3>
+            <textarea name="system.npc.quote">{{system.npc.quote}}</textarea>
+          </div>
+          <div class="panel">
+            <h3>Basics</h3>
+            <label>Service Group</label>
+            <input name="system.npc.basics.serviceGroup" type="text" value="{{system.npc.basics.serviceGroup}}" />
+            <label>Secret Society</label>
+            <input name="system.npc.basics.secretSociety" type="text" value="{{system.npc.basics.secretSociety}}" />
+            <label>Mutant Power</label>
+            <input name="system.npc.basics.mutantPower" type="text" value="{{system.npc.basics.mutantPower}}" />
+          </div>
+          <div class="panel">
+            <h3>Looks</h3>
+            <textarea name="system.npc.looks">{{system.npc.looks}}</textarea>
+          </div>
+          <div class="panel">
+            <h3>Quirks</h3>
+            <textarea name="system.npc.quirks">{{system.npc.quirks}}</textarea>
+          </div>
+          <div class="panel">
+            <h3>Plans</h3>
+            <textarea name="system.npc.plans">{{system.npc.plans}}</textarea>
+          </div>
+          <div class="panel">
+            <h3>Gear</h3>
+            <textarea name="system.npc.gear">{{system.npc.gear}}</textarea>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+
+    <div class="tab" data-group="primary" data-tab="items">
+      <section class="items-section">
+        <header>
+          <h3>Equipment</h3>
+          <button class="item-create" type="button" data-type="equipment">Add</button>
+        </header>
+        <div class="items-list">
+          {{#each itemsByType.equipment}}
+            <div class="item-row" data-item-id="{{_id}}">
+              <span class="item-name">{{name}}</span>
+              <span class="item-detail">Lvl {{system.level}}</span>
+              <div class="item-controls">
+                <button class="item-edit" type="button">Edit</button>
+                <button class="item-delete" type="button">Delete</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="items-section">
+        <header>
+          <h3>Mutant Powers</h3>
+          <button class="item-create" type="button" data-type="mutantPower">Add</button>
+        </header>
+        <div class="items-list">
+          {{#each itemsByType.mutantPower}}
+            <div class="item-row" data-item-id="{{_id}}">
+              <span class="item-name">{{name}}</span>
+              <div class="item-controls">
+                <button class="item-edit" type="button">Edit</button>
+                <button class="item-delete" type="button">Delete</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="items-section">
+        <header>
+          <h3>Secret Societies</h3>
+          <button class="item-create" type="button" data-type="secretSociety">Add</button>
+        </header>
+        <div class="items-list">
+          {{#each itemsByType.secretSociety}}
+            <div class="item-row" data-item-id="{{_id}}">
+              <span class="item-name">{{name}}</span>
+              <div class="item-controls">
+                <button class="item-edit" type="button">Edit</button>
+                <button class="item-delete" type="button">Delete</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+
+      <section class="items-section">
+        <header>
+          <h3>Coretech & Apps</h3>
+          <button class="item-create" type="button" data-type="coretech">Add</button>
+        </header>
+        <div class="items-list">
+          {{#each itemsByType.coretech}}
+            <div class="item-row" data-item-id="{{_id}}">
+              <span class="item-name">{{name}}</span>
+              <span class="item-detail">Lvl {{system.level}}</span>
+              <div class="item-controls">
+                <button class="item-edit" type="button">Edit</button>
+                <button class="item-delete" type="button">Delete</button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </section>
+    </div>
+  </section>
+</section>

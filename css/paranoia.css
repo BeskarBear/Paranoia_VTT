@@ -1,0 +1,207 @@
+.paranoia-vtt .paranoia-sheet {
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+  color: #1b1b1b;
+  background: linear-gradient(140deg, #f9f7f1 0%, #f1f4f5 100%);
+  padding: 12px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paranoia-vtt .sheet-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.paranoia-vtt .sheet-header .actor-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 6px 8px;
+}
+
+.paranoia-vtt .identity-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 10px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.paranoia-vtt .header-right {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.paranoia-vtt .resource-block {
+  background: #fdf7e3;
+  border: 1px solid #d6caa1;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.paranoia-vtt .resource-block label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.paranoia-vtt .resource-note {
+  font-size: 0.8rem;
+  color: #5c4b1a;
+  margin-top: 4px;
+}
+
+.paranoia-vtt .roll-custom {
+  background: #e95f5f;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.paranoia-vtt .stats-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.paranoia-vtt .stat-block {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+}
+
+.paranoia-vtt .stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.paranoia-vtt .stat-header label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.paranoia-vtt .skill-list {
+  display: grid;
+  gap: 6px;
+}
+
+.paranoia-vtt .skill-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.paranoia-vtt .skill-row button {
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.paranoia-vtt .skill-node {
+  font-size: 0.8rem;
+  color: #5f6b6d;
+  text-align: right;
+}
+
+.paranoia-vtt .roleplay-grid,
+.paranoia-vtt .notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.paranoia-vtt .panel {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+}
+
+.paranoia-vtt .panel h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.paranoia-vtt textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.paranoia-vtt .items-section {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.paranoia-vtt .items-section header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.paranoia-vtt .items-list {
+  display: grid;
+  gap: 6px;
+}
+
+.paranoia-vtt .item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.paranoia-vtt .item-controls button {
+  margin-left: 4px;
+}
+
+.paranoia-vtt .paranoia-roll {
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+.paranoia-vtt .paranoia-roll .die {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.paranoia-vtt .paranoia-roll .die.computer {
+  background: #ffdf99;
+}
+
+.paranoia-vtt .roll-outcome.success {
+  color: #1f7a3e;
+  font-weight: 700;
+}
+
+.paranoia-vtt .roll-outcome.failure {
+  color: #b42d2d;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .paranoia-vtt .sheet-header {
+    grid-template-columns: 1fr;
+  }
+}

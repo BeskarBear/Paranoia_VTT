@@ -1,0 +1,34 @@
+{
+  "id": "paranoia-vtt",
+  "title": "Paranoia (Core Rulebook 07-01-25)",
+  "description": "A Foundry VTT system for Paranoia (Core Rulebook 07-01-25).",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "authors": [
+    {
+      "name": "beskarbear"
+    }
+  ],
+  "esmodules": ["module/paranoia.mjs"],
+  "styles": ["css/paranoia.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "primaryTokenAttribute": null,
+  "secondaryTokenAttribute": null,
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "socket": false,
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

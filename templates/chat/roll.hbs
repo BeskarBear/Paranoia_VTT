@@ -1,0 +1,32 @@
+<div class="paranoia-roll">
+  <h2>{{title}}</h2>
+  <div class="roll-meta">
+    <div><strong>Actor:</strong> {{actorName}}</div>
+    <div><strong>Base NODE:</strong> {{base}}</div>
+    <div><strong>Difficulty:</strong> {{difficulty}}</div>
+  </div>
+
+  <div class="roll-results">
+    <div>
+      <strong>Dice:</strong>
+      {{#if normalResults.length}}
+        {{#each normalResults}}<span class="die">{{this}}</span>{{/each}}
+      {{else}}
+        <span class="die">-</span>
+      {{/if}}
+      <span class="die computer">{{computerResult}}</span>
+    </div>
+    <div><strong>Successes:</strong> {{successes}}</div>
+    {{#if negativeNode}}
+      <div><strong>Failures:</strong> {{failures}}</div>
+      <div><strong>Net Successes:</strong> {{netSuccesses}}</div>
+    {{/if}}
+    <div class="roll-outcome {{#if passed}}success{{else}}failure{{/if}}">
+      {{#if passed}}Success{{else}}Failure{{/if}}
+    </div>
+    <div class="computer-attention">
+      <strong>Computer Attention:</strong>
+      {{#if computerAttention}}Yes ({{symbolThreshold}}+ on Computer Die){{else}}No ({{symbolThreshold}}+ on Computer Die){{/if}}
+    </div>
+  </div>
+</div>
